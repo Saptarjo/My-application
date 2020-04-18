@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4D0D0"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginTop="40sp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#C39E9E"
+            android:gravity="center"
+            android:text="Choose Frequency"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:spinnerMode="dropdown"
+            android:prompt="@array/Monthly"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:dropDownSelector="@android:drawable/arrow_down_float"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin2"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_below="@+id/lin1"
+        android:layout_marginTop="20sp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#D6B8B8"
+            android:gravity="center"
+            android:text="First payment Date"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="Choose Date" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            app:srcCompat="@drawable/ca655453eb79fe8db19601dfcf53ed95" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_below="@+id/lin2"
+        android:layout_marginTop="20sp"
+        android:gravity="center_vertical"
+        android:text="Enter Amount"
+        android:textColor="#0E0C0C"
+        android:textSize="18sp"></TextView>
+
+    <EditText
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_below="@+id/text1"
+        android:layout_margin="20sp"
+        android:hint="Amount">
+
+    </EditText>
+
+    <LinearLayout
+        android:id="@+id/lin3"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_below="@+id/text2"
+        android:layout_marginTop="20sp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:hint="Enter Period"></EditText>
+
+        <View
+            android:layout_width="20sp"
+            android:layout_height="match_parent"></View>
+
+        <Spinner
+            android:id="@+id/spinn2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:dropDownSelector="@android:drawable/arrow_down_float"
+            android:prompt="@array/Monthly"
+            android:spinnerMode="dropdown"
+            android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_below="@+id/lin3"
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:text="or Enter End Date"
+        android:textColor="#1C1919">
+
+    </TextView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_alignParentBottom="true"
+        android:background="#9C27B0"
+        android:text="Submit"
+        android:textColor="#E8D1D1"></Button>
+
+</RelativeLayout>

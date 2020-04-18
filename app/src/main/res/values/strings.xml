@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="spinner_prompt">Monthly</string>
+    <string name="spinner_prompt1">Daily</string>
+    <string-array name="Monthly">
+        <item>Monthly</item>
+        <item>Quaterly</item>
+        <item>Half Yearly</item>
+        <item>Annually</item>
+        <item>Weekly</item>
+    </string-array>
+
+
+
+
+</resources>
