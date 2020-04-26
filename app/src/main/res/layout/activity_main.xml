@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     android:background="#E4D0D0"
     tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        />
 
     <LinearLayout
         android:id="@+id/lin1"
@@ -47,7 +53,7 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="85dp"
+            android:layout_width="235dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#D6B8B8"
@@ -57,19 +63,22 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+            android:layout_width="146dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
             android:gravity="center"
             android:text="Choose Date" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="2dp"
+        <Button
+            android:id="@+id/btnGoCalendar"
+            android:layout_width="93dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            app:srcCompat="@drawable/ca655453eb79fe8db19601dfcf53ed95" />
+            android:background="@drawable/ca655453eb79fe8db19601dfcf53ed95" />
+
+
     </LinearLayout>
+
 
     <TextView
         android:id="@+id/text1"
@@ -83,7 +92,7 @@
         android:textSize="18sp"></TextView>
 
     <EditText
-        android:id="@+id/text2"
+        android:id="@+id/tex1"
         android:layout_width="match_parent"
         android:layout_height="60sp"
         android:layout_below="@+id/text1"
@@ -96,12 +105,13 @@
         android:id="@+id/lin3"
         android:layout_width="match_parent"
         android:layout_height="60sp"
-        android:layout_below="@+id/text2"
+        android:layout_below="@+id/tex1"
         android:layout_marginTop="20sp"
         android:orientation="horizontal">
 
         <EditText
             android:layout_width="match_parent"
+            android:id="@+id/tex2"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:hint="Enter Period"></EditText>
@@ -139,10 +149,13 @@
 
     <Button
         android:layout_width="match_parent"
+        android:id="@+id/submit"
         android:layout_height="60sp"
         android:layout_alignParentBottom="true"
         android:background="#9C27B0"
         android:text="Submit"
-        android:textColor="#E8D1D1"></Button>
+
+        android:textColor="#E8D1D1"/>
+
 
 </RelativeLayout>
