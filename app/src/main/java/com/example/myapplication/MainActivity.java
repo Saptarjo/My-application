@@ -44,18 +44,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinn);
+        Spinner freq1 = (Spinner) findViewById(R.id.spinn);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Monthly, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        freq1.setAdapter(adapter);
 
 
         theDate = (EditText) findViewById(R.id.date);
         btnGoCalendar = (Button) findViewById(R.id.btnGoCalendar);
         submitButton = (Button) findViewById(R.id.submit);
 
-        freq1 = (Spinner) findViewById(R.id.spinn);
-        freq2 = (Spinner) findViewById(R.id.spinn2);
+
+
         amount = (EditText) findViewById(R.id.tex1);
         period = (EditText) findViewById(R.id.tex2);
         Log.d(TAG, "onCreate: View Initialization done");
@@ -80,12 +80,12 @@ public class MainActivity extends AppCompatActivity {
         mContext = this;
 
 
-        Spinner spinner2 = (Spinner) findViewById(R.id.spinn2);
+        Spinner freq2 = (Spinner) findViewById(R.id.spinn2);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.Monthly, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner2.setAdapter(adapter2);
+        freq2.setAdapter(adapter2);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        freq1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String it = (String) parent.getItemAtPosition(position);
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        freq2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String it = (String) parent.getItemAtPosition(position);
